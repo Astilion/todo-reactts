@@ -1,16 +1,17 @@
+import Todo from "../models/todo";
 
 type Props = {
-    items: string[];
+	items: Todo[];
 };
 
 const Todos = (props: Props) => {
-    return (
-        <ul>
-        {props.items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    )
-}
+	return (
+		<ul>
+			{props.items.map(item => (
+				<li key={item.id}>{item.text}</li>
+			))}
+		</ul>
+	);
+};
 
 export default Todos;

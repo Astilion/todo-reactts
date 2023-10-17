@@ -1,14 +1,14 @@
-import './App.scss'
-import Todos from './components/Todos'
-
+import "./App.scss";
+import Todos from "./components/Todos";
+import Todo from "./models/todo";
 function App() {
+	const todos = [new Todo("Learn React"), new Todo("Learn Typescript")];
 
-
-  return (
-    <>
-    <Todos items={['Learn React','Learn Typescript']}/>
-    </>
-  )
+	return (
+		<>
+			<Todos items={todos} />
+		</>
+	);
 }
 
-export default App
+export default App;
