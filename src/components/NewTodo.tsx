@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import styles from './NewTodo.module.scss'
 
 type NewTodoProps = {
     onAddTodo: (text: string) => void;
@@ -17,7 +18,7 @@ const NewTodo = (props: NewTodoProps) => {
         props.onAddTodo(enteredText)
 	};
 	return (
-		<form onSubmit={submitHandler}>
+		<form className={styles.form} onSubmit={submitHandler}>
 			<label htmlFor='text'>Todo text</label>
 			<input type='text' id='text' ref={todoTextInputRef} />
 			<button>Add Todo</button>
